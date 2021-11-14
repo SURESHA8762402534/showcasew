@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            background-color: violet;
+            box-shadow: 0 0 10px black;
+            padding: 30px;
+            margin: 100px auto;
+        }
+
+        label{
+            color: blue;
+            
+        }
+
+        #btn:hover{
+            background-color: red;
+            color: blue;
+        }
+    </style>
+    <script>
+        function hide(){
+            var hide = document.getElementById('i1');
+            
+            var button = document.querySelector('#btn');
+            hide.type = "text";
+            button.innerText="hide password";
+           //button.addEventListener('click',fun() );
+
+        }
+        function show(){
+            var show = document.getElementById('i1')
+            var button = document.querySelector('button');
+            button.innerText = "show password";
+            show.type = "password"
+        }
+
+        function fun(){
+            var input = document.getElementById('i1')
+            if(input.type == "password"){
+                hide()
+            }
+            else{
+                show()
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <div>
+        <label>enter password</label>
+        <input type="password" placeholder="enter pass word" maxlength="15" minlength="8" id="i1">
+        <button id="btn" onclick="fun()" >show password</button>
+    </div>
+    
+</body>
+</html>
